@@ -1,0 +1,158 @@
+.materials-section {
+  padding: 100px 0;
+  background-color: #ffffff; 
+  overflow: hidden;
+}
+
+.materials-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.materials-content {
+  flex: 0 0 40%; 
+  text-align: left;
+}
+
+.mat-subtitle {
+  color: #E58411; 
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.mat-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1E1E1E;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.mat-description {
+  color: #8D8D8D;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.mat-link {
+  text-decoration: none;
+  color: #E58411;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: gap 0.3s ease;
+}
+
+.mat-link:hover {
+  gap: 15px;
+}
+
+.materials-images {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  align-items: flex-start; 
+}
+
+.mat-bg-shape {
+  position: absolute;
+  top: -40px;
+  right: -30px;
+  width: 60%; 
+  height: 50%;
+  background: #F7F7F7; 
+  border-radius: 20px;
+  z-index: 0;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.mat-col-small {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+  margin-top: 40px; 
+}
+
+.mat-col-large {
+  z-index: 1;
+}
+
+.mat-img {
+  margin-top: -40px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  background-color: #ddd; 
+}
+
+.small-img {
+  margin-top: 30px;
+  width: 200px;
+  height: 220px;
+}
+
+.big-img {
+  margin-left: 20px;
+  margin-top: 130px; 
+  width: 460px;
+  height: 430px; 
+  border-radius: 20px 0 0 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .materials-container {
+    flex-direction: column; 
+    gap: 50px;
+  }
+
+  .materials-content {
+    flex: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mat-description {
+    max-width: 100%;
+  }
+
+  .materials-images {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .materials-images {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .mat-col-small {
+    margin-top: 0;
+  }
+
+  .small-img, .big-img {
+    width: 100%; 
+    height: auto;
+    max-width: 350px;
+  }
+  
+  .mat-bg-shape {
+    display: none; 
+  }
+}

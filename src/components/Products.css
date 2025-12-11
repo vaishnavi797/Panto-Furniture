@@ -1,0 +1,232 @@
+.products-section {
+  padding: 80px 0;
+  background-color: #F7F7F7;
+  width: 100%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1E1E1E;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.tabs-pill {
+  background-color: #EEEEEE;
+  padding: 6px;
+  border-radius: 40px;
+  display: flex;
+  gap: 5px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 35px;
+  font-size: 16px;
+  color: #8D8D8D;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.tab-btn.active {
+  background-color: #FFFFFF;
+  color: #1E1E1E;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-weight: 600;
+}
+
+.products-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 30px;
+  width: 100%;
+  padding: 20px 0;
+  justify-items: center; 
+}
+
+.product-card {
+  background: white;
+  border-radius: 20px;
+  width: 260px;
+  min-width: 260px;
+  padding: 18px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+  scroll-snap-align: center;
+  border: 1px solid transparent;
+}
+
+.product-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  border-color: #f0f0f0;
+}
+
+.card-image {
+  height: 220px;
+  width: 100%;
+  background-color: #F7F7F7;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-image img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.card-category {
+  color: #8D8D8D;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1E1E1E;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-rating {
+  font-size: 14px;
+  color: #F6B76F;
+  margin-bottom: 15px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1E1E1E;
+}
+.currency { font-size: 14px; vertical-align: top; }
+
+.add-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #0D1B39;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #E58411;
+  transform: scale(1.1); 
+  box-shadow: 0 0 15px rgba(229, 132, 17, 0.5); 
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1E1E1E;
+  transition: all 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: #E58411;
+  color: white;
+}
+
+.left-btn { left: -70px; }
+.right-btn { right: -70px; }
+
+.view-all-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.view-all-link {
+  color: #E58411;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: gap 0.3s ease;
+  background: transparent;
+}
+
+.view-all-link:hover {
+  gap: 20px;
+  opacity: 0.9;
+}
+
+.view-all-link span { font-size: 20px; }
+
+@media screen and (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px; 
+  }
+
+  .carousel-btn {
+    display: none; 
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .products-grid {
+    grid-template-columns: 1fr; 
+    gap: 30px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,139 @@
+.experiences-section {
+  padding: 120px 0; 
+  background-color: #F7F7F7; 
+  overflow: hidden;
+}
+
+.experiences-container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  gap: 80px; 
+}
+
+.experiences-image-wrapper {
+  position: relative;
+  flex: 1.2; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px; 
+}
+
+.main-experience-img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 0 20px 20px 0; 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+  position: relative;
+  z-index: 10; 
+}
+
+.bg-blob {
+  position: absolute;
+  background-color: #e6e5e5; 
+  border-radius: 20px;
+  z-index: 1; 
+}
+
+.blob-top {
+  width: 70%;
+  height: 70%;
+  top: 0;
+  left: 0;
+  border-radius: 0 20px 0 0; 
+}
+
+.blob-bottom {
+  width: 60%;
+  height: 50%;
+  bottom: 20px;
+  right: 10px;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 120px;
+  margin-right: -20px;
+}
+
+.experiences-content {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.exp-subtitle {
+  color: #E58411; 
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.exp-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1E1E1E;
+  line-height: 1.25;
+  margin-bottom: 25px;
+}
+
+.exp-description {
+  color: #8D8D8D;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 480px; 
+}
+
+.exp-link {
+  text-decoration: none;
+  color: #E58411;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: gap 0.3s ease;
+}
+
+.exp-link:hover {
+  gap: 15px;
+}
+.exp-link span { font-size: 18px; }
+
+
+@media screen and (max-width: 1024px) {
+  .experiences-container {
+    flex-direction: column; 
+    gap: 50px;
+  }
+
+  .experiences-image-wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .experiences-content {
+    text-align: center;
+    padding-left: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .exp-description {
+    margin: 0 auto 30px auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .exp-title {
+    font-size: 32px;
+  }
+  
+  .blob-top { width: 90%; top: 10px; left: 10px; }
+  .blob-bottom { display: none; }
+}
